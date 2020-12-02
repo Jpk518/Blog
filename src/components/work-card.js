@@ -17,37 +17,38 @@ const useStyles = makeStyles({
     },
     title: {
         fontSize: 14,
-    }
+    },
+    font: {
+        fontFamily: 'Castoro',
+    },
 });
 
 const WorkCard = () => {
     const classes = useStyles();
     return (
-      <Card className={classes.root} >
-          <CardActionArea>
-              <CardMedia
-                  component="img"
-                  alt="Space"
-                  height="200"
-                  image="/images/space.jpg"
-                  title="Space"
-                  style={{
-                      margin: `0`,
-                  }}
-              />
-              <CardContent style={{
-                  margin: `1vw`,
-              }}>
-                  <Typography gutterBottom variant="h3" component="h2">
-                      Space
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                      Space is cool
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis culpa debitis dolorum ea eum facilis, illo laudantium molestiae omnis quo soluta veritatis voluptas. Aliquam architecto consequuntur dolore dolorem doloribus, fugiat!
-                  </Typography>
-              </CardContent>
-          </CardActionArea>
-      </Card>
+        <Card className={classes.root} >
+            <CardMedia
+                component="img"
+                alt="Space"
+                height="200"
+                image="/images/ghiblibg.png"
+                title="Space"
+                style={{
+                    margin: `0`,
+                }}
+            />
+            <CardContent style={{
+                margin: `1vw`,
+            }}>
+                <Typography className={classes.font} gutterBottom variant="h3" component="h2" >
+                    Space
+                </Typography>
+                <Typography className={classes.font} variant="body2" color="textSecondary" component="p">
+                    Space is cool
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis culpa debitis dolorum ea eum facilis, illo laudantium molestiae omnis quo soluta veritatis voluptas. Aliquam architecto consequuntur dolore dolorem doloribus, fugiat!
+                </Typography>
+            </CardContent>
+        </Card>
     );
 };
 

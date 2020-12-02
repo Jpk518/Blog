@@ -34,6 +34,16 @@ module.exports = {
         name: 'pages'
       }
     },
-      'gatsby-transformer-remark',
+    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Castoro',
+          }
+        ]
+      }
+    }
   ],
 }

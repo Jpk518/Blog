@@ -6,10 +6,14 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.1",
+    "fontsource-bree-serif": "^3.0.9",
+    "fontsource-castoro": "^3.0.1",
     "fontsource-roboto": "^3.0.3",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-catch-links": "^2.5.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-fonts-v2": "0.0.6",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",
@@ -20,7 +24,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "typewriter-effect": "^2.17.0"
   },
   "devDependencies": {
     "eslint": "^7.14.0",
