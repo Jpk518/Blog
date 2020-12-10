@@ -3,7 +3,7 @@ company: "Bell"
 title: "Engineering Intern"
 date: "2016-05-01"
 dates: "Jan 2016-May 2016"
-location: "St. John's, NL"__
+location: "St. John's, NL"
 image: "../../bellRadio.jpg"
 ---
 
