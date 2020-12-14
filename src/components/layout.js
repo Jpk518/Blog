@@ -11,9 +11,24 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import makeStyles from "@material-ui/core/styles/makeStyles";
+
+const useStyles = makeStyles({
+    layout: {
+        margin: `0 auto`,
+    },
+    footer: {
+        marginTop: '6vw',
+        width: '100vw',
+        padding: `3rem`,
+        background: `rgb(20, 35, 75)`,
+    }
+});
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+    const classes = useStyles();
+
+    const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -26,19 +41,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-            margin: `0 auto`,
-            maxWidth: '80vw',
-            padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className={classes.layout}>
         <main>{children}</main>
-        {/*<footer style={{*/}
-        {/*  marginTop: `2rem`*/}
-        {/*}}>*/}
-        {/*  Josh Kearney, {new Date().getFullYear()}*/}
-        {/*</footer>*/}
+        <footer className={classes.footer}>
+          Josh Kearney, {new Date().getFullYear()}
+        </footer>
       </div>
     </>
   )

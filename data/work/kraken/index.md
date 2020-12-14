@@ -1,5 +1,5 @@
 ---
-company: "Kraken"
+company: "Kraken Robotics"
 title: "Engineering Intern"
 date: "2017-08-01"
 dates: "May 2017-Aug 2017"

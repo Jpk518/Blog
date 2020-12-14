@@ -1,5 +1,5 @@
 ---
-company: "Duxion"
+company: "Duxion Motors"
 title: "Engineering Intern"
 date: "2018-06-01"
 dates: "Jan 2018-May 2018"

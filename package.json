@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.1",
+    "@material-ui/icons": "^4.11.2",
     "fontsource-bree-serif": "^3.0.9",
     "fontsource-castoro": "^3.0.1",
     "fontsource-roboto": "^3.0.3",
@@ -25,6 +26,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-spring": "^8.0.27",
     "typewriter-effect": "^2.17.0"
   },
   "devDependencies": {
