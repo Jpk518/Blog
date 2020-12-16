@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     sizing: {
         margin: `0 auto`,
         maxWidth: 1000,
-        padding: `10rem 1rem`,
+        // padding: `10rem 1rem`,
+        padding: `5rem 1rem`,
     },
     heading: {
         marginBottom: 15,
@@ -30,6 +31,14 @@ const Header = () => {
     return (
         <header className={classes.header}>
             <div className={classes.sizing}>
+                <Grid container alignItems="center" justify="center" >
+                    <Grid item xs={8} style={{paddingBottom: '5rem'}}>
+                        This site is currently under construction while porting to a new layout :)
+                        <br />
+                        To see a current view, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
+                    </Grid>
+                </Grid>
+
                 <Grid container alignContent="space-between" alignItems="center" justify="center" spacing={10}>
                     <Grid item xs={4}>
                         <h1 className={classes.heading}>

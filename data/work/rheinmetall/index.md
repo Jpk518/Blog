@@ -1,4 +1,5 @@
 ---
+type: "work"
 company: "Rheinmetall Landsysteme"
 title: "Engineering Intern"
 date: "2016-12-01"

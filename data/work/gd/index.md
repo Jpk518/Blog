@@ -1,4 +1,5 @@
 ---
+type: "work"
 company: "General Dynamics"
 title: "Software Engineering Intern"
 date: "2018-12-01"

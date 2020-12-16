@@ -1,4 +1,5 @@
 ---
+type: "work"
 company: "Bell"
 title: "Engineering Intern"
 date: "2016-05-01"

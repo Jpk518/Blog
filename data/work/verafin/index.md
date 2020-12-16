@@ -1,4 +1,5 @@
 ---
+type: "work"
 company: "Verafin"
 title: "Cloud Software Engineer"
 date: "2019-06-01"

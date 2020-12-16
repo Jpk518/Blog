@@ -1,4 +1,5 @@
 ---
+type: "work"
 company: "Duxion Motors"
 title: "Engineering Intern"
 date: "2018-06-01"
