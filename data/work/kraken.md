@@ -1,5 +1,6 @@
 ---
-type: "work"
+type: "employment"
+typeHeader: "Employment"
 company: "Kraken Robotics"
 title: "Engineering Intern"
 date: "2017-08-01"

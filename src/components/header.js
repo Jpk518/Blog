@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         margin: `0 auto`,
         maxWidth: 1000,
         // padding: `10rem 1rem`,
-        padding: `6rem 1rem`,
+        padding: `3rem 1rem 10rem`,
     },
     heading: {
         marginBottom: 15,

@@ -7,10 +7,9 @@ import CardActions from "@material-ui/core/CardActions";
 import Grid from "@material-ui/core/Grid";
 import {animated, useSpring} from "react-spring";
 import WorkIcon from '@material-ui/icons/Work';
-import cardStyles from "./card-style";
 
-const WorkCard = ({post}) => {
-    const classes = cardStyles();
+const ProjectCard = ({post}) => {
+    const classes = ca();
     const AnimatedCard = animated(Card)
     const [active, setActive] = React.useState(false);
     const spring = useSpring({
@@ -43,38 +42,13 @@ const WorkCard = ({post}) => {
                 <CardContent style={{
                     margin: `0 1vw 0`,
                 }}>
-                    <Grid container alignItems="center" spacing={1}>
-                        <Grid item >
-                        <WorkIcon color="secondary"
-                                  style={{
-                                      margin: `0.2vw 0`,
-                                  }}/>
-                        </Grid>
-                        <Grid item>
-                            <Typography className={classes.font} variant="body2" color="textSecondary">
-                                {post.node.frontmatter.typeHeader}
-                        </Typography>
-                        </Grid>
-                    </Grid>
-                    <Grid container justify="space-between" alignItems="center" spacing={1}>
-                        <Grid item>
-                            <Typography className={classes.font}  variant="h5"  style={{fontWeight:'bold', fontSize:'30px'}}>
-                                {post.node.frontmatter.company}
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                    <Grid container justify="space-between" alignItems="center" spacing={1}>
-                        <Grid item>
-                            <Typography className={classes.font} variant="body2" color="textSecondary" style={{paddingBottom: '1rem', fontWeight: 'bold'}}>
-                                {post.node.frontmatter.title}
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography className={classes.font} variant="body2" color="textSecondary" style={{paddingBottom: '1rem', fontWeight: 'bold'}}>
-                                {post.node.frontmatter.location}
-                            </Typography>
-                        </Grid>
-                    </Grid>
+                    <WorkIcon color="secondary"
+                              style={{
+                                  margin: `0.5vw 0`,
+                              }}/>
+                    <Typography className={classes.font} gutterBottom variant="h5"  style={{fontWeight:'bold', fontSize:'30px'}}>
+                        {post.node.frontmatter.company}
+                    </Typography>
                     <Typography className={classes.font} variant="body2" color="textSecondary">
                         <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
                     </Typography>
@@ -86,10 +60,16 @@ const WorkCard = ({post}) => {
                     }}>
                         {post.node.frontmatter.dates}
                     </Typography>
+                    <Typography className={classes.font} style={{
+                        marginLeft: `3vw`,
+                    }}>
+                        {post.node.frontmatter.location}
+                    </Typography>
+
                 </CardActions>
             </AnimatedCard>
         </Grid>
     );
 };
 
-export default WorkCard;
+export default ProjectCard;
