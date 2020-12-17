@@ -37,6 +37,7 @@ const Header = () => {
                         <br />
                         To see a current view of my projects, experience, etc, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
                     </Grid>
+
                 </Grid>
 
                 <Grid container alignContent="space-between" alignItems="center" justify="center" spacing={10}>
