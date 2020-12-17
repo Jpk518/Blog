@@ -32,8 +32,8 @@ const Header = () => {
         <header className={classes.header}>
             <div className={classes.sizing}>
                 <Grid container alignItems="center" justify="center" >
-                    <Grid item xs={8} style={{paddingBottom: '5rem'}}>
-                        This site is currently under construction while porting to a new layout :)
+                    <Grid item xs={8} style={{paddingBottom: '5rem', background: bgColor}}>
+                        This site is under construction while porting to a new layout :)
                         <br />
                         To see a current view of my projects, experience, etc, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
                     </Grid>
