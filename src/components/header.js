@@ -32,12 +32,11 @@ const Header = () => {
         <header className={classes.header}>
             <div className={classes.sizing}>
                 <Grid container alignItems="center" justify="center" >
-                    <Grid item xs={8} style={{paddingBottom: '5rem', background: bgColor}}>
+                    <Grid item xs={8} style={{paddingBottom: '5rem', paddingTop: '0'}}>
                         This site is under construction while porting to a new layout :)
                         <br />
                         To see a current view of my projects, experience, etc, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
                     </Grid>
-
                 </Grid>
 
                 <Grid container alignContent="space-between" alignItems="center" justify="center" spacing={10}>
