@@ -25,7 +25,7 @@ const Projects = () => {
     `)
 
     return (
-        <Grid id="project" container spacing={2}  style={{padding: '3rem'}}>
+        <Grid id="project" container spacing={2}  style={{paddingBottom: '3rem'}}>
             <Grid item xs={12}>
                 <Grid container justify="center" spacing={spacing}>
                     {data.allMarkdownRemark.edges.map(post => (<ProjectCard post={post}/>))}
