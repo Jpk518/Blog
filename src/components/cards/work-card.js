@@ -61,15 +61,13 @@ const WorkCard = ({post}) => {
                         <Grid item>
                             <Typography className={classes.font}  variant="h5"  style={{
                                 fontWeight:'bold',
-                                fontSize:'32px',
-                                color: '#2253d6'
+                                fontSize:'33px',
                             }}>
                                 {post.node.frontmatter.company}
                             </Typography>
                         </Grid>
                     </Grid>
                     <Grid container justify="space-between"  alignItems="center" spacing={1} style={{
-                        color:'#1b3c95',
                         paddingBottom: '0.5rem'
                     }}>
                         <Grid item>
@@ -86,8 +84,9 @@ const WorkCard = ({post}) => {
                     <Typography
                         className={classes.sansFont}
                         variant="body2"
+                        color="textSecondary"
                         style={{
-                            fontSize: '14px',
+                            fontSize: '15px',
                         }}
                     >
                         <div dangerouslySetInnerHTML={{ __html: post.node.html }} />

@@ -8,7 +8,6 @@ const bgColor = `rgb(20, 35, 75)`
 const useStyles = makeStyles({
     header: {
         background: bgColor,
-        marginBottom: `6rem`,
     },
     sizing: {
         margin: `0 auto`,
@@ -35,7 +34,7 @@ const Header = () => {
                     <Grid item xs={8} style={{paddingBottom: '5rem', paddingTop: '0'}}>
                         This site is under construction while porting to a new layout :)
                         <br />
-                        To see a current view of my projects, experience, etc, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
+                        To see a complete view of my projects, experience, etc, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
                     </Grid>
                 </Grid>
 

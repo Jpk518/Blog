@@ -29,7 +29,7 @@ const Work = () => {
     `)
 
     return (
-        <Grid container spacing={2}>
+        <Grid id="work" container spacing={2} style={{paddingTop: '3rem'}}>
             <Grid item xs={12}>
                 <Grid container justify="center" spacing={spacing}>
                     {data.allMarkdownRemark.edges.map(post => (<WorkCard post={post}/>))}
