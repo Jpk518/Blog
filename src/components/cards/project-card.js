@@ -7,9 +7,10 @@ import CardActions from "@material-ui/core/CardActions";
 import Grid from "@material-ui/core/Grid";
 import {animated, useSpring} from "react-spring";
 import WorkIcon from '@material-ui/icons/Work';
+import cardStyles from "./card-style";
 
 const ProjectCard = ({post}) => {
-    const classes = ca();
+    const classes = cardStyles();
     const AnimatedCard = animated(Card)
     const [active, setActive] = React.useState(false);
     const spring = useSpring({
@@ -31,8 +32,8 @@ const ProjectCard = ({post}) => {
             >
                 <CardMedia
                     component="img"
-                    alt="Work"
-                    height="250"
+                    alt="Project"
+                    height="375"
                     src={post.node.frontmatter.image}
                     title="Work"
                     style={{
@@ -42,12 +43,22 @@ const ProjectCard = ({post}) => {
                 <CardContent style={{
                     margin: `0 1vw 0`,
                 }}>
-                    <WorkIcon color="secondary"
-                              style={{
-                                  margin: `0.5vw 0`,
-                              }}/>
+                    <Grid container alignItems="center" spacing={1}>
+                        <Grid item >
+                            <WorkIcon color="secondary"
+                                      style={{
+                                          margin: `0.5vw 0`,
+                                          // fontSize: '30px'
+                                      }}/>
+                        </Grid>
+                        <Grid item>
+                            <Typography className={classes.font} variant="body2" >
+                                {post.node.frontmatter.typeHeader}
+                            </Typography>
+                        </Grid>
+                    </Grid>
                     <Typography className={classes.font} gutterBottom variant="h5"  style={{fontWeight:'bold', fontSize:'30px'}}>
-                        {post.node.frontmatter.company}
+                        {post.node.frontmatter.title}
                     </Typography>
                     <Typography className={classes.font} variant="body2" color="textSecondary">
                         <div dangerouslySetInnerHTML={{ __html: post.node.html }} />

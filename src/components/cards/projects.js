@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql, useStaticQuery} from "gatsby";
 import Grid from "@material-ui/core/Grid";
-import WorkCard from "./work-card";
+import ProjectCard from "./project-card";
 
 const Projects = () => {
     const [spacing] = React.useState(6);
@@ -13,10 +13,8 @@ const Projects = () => {
                     node {
                     id
                         frontmatter {
-                          company
                           title
-                          dates
-                          location
+                          typeHeader
                           image
                         }
                     html
@@ -27,7 +25,7 @@ const Projects = () => {
     `)
 
     return (
-        <Grid container spacing={2}>
+        <Grid id="work" container spacing={2}  style={{padding: '3rem'}}>
             <Grid item xs={12}>
                 <Grid container justify="center" spacing={spacing}>
                     {data.allMarkdownRemark.edges.map(post => (<ProjectCard post={post}/>))}

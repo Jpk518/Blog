@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import {HashRouter, Link} from "react-router-dom";
 import './index.css'
+import Projects from "../components/cards/projects";
 
 const IndexPage = () => {
     return (
@@ -29,7 +30,7 @@ const IndexPage = () => {
                         </a>
                     </Grid>
                     <Grid item>
-                        <a href="#projects" style={{ textDecoration: 'none' }}>
+                        <a href="#project" style={{ textDecoration: 'none' }}>
                             <Typography variant="h5" style={{color: '#1b3c95', fontFamily: 'Open Sans'}}>
                                 Projects
                             </Typography>
@@ -37,6 +38,7 @@ const IndexPage = () => {
                     </Grid>
                 </Grid>
                 <Work />
+                <Projects />
 
             </Layout>
         </HashRouter>

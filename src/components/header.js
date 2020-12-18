@@ -53,11 +53,7 @@ const Header = () => {
                         />
                     </Grid>
                     <Grid item xs={4}>
-                        <img style={{
-                            height: '250px',
-                            borderRadius: '50%',
-                        }}
-                             src="../../me.jpg" />
+                        <img style={{height: '250px', borderRadius: '50%'}} src="../../me.jpg" />
                     </Grid>
                 </Grid>
             </div>
