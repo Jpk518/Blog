@@ -9,4 +9,4 @@ location: "St. John's, NL"
 image: "../../sunset-plane.jpg"
 ---
 
-Developed a thermal cooling solution for next-generation electric aviation technology
+Developed a thermal cooling solution for Duxions patented next-generation electric aviation technology

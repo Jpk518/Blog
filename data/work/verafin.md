@@ -9,4 +9,4 @@ location: "St. John's, NL"
 image: "../../verafin.jpg"
 ---
 
-Developing cloud architectural solutions for world leading financial crime technologies 
+Currently, I work developing innovative cloud solutions to power and industry leading software in the fight against financial crime

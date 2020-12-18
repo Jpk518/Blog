@@ -3,18 +3,21 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 const cardStyles = makeStyles({
   root: {
     minWidth: '10vw',
-    maxWidth: 420,
+    maxWidth: 400,
     minHeight: 500,
     border: 'none',
     boxShadow: 'none',
     background: '#fde6f0',
-    color: '#2253d6',
+    color: '#1b3c95',
   },
   title: {
     fontSize: 14,
   },
   font: {
     fontFamily: 'Castoro',
+  },
+  sansFont: {
+    fontFamily: 'sans-serif',
   },
 });
 

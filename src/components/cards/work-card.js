@@ -47,42 +47,61 @@ const WorkCard = ({post}) => {
                         <Grid item >
                         <WorkIcon color="secondary"
                                   style={{
-                                      margin: `0.2vw 0`,
+                                      margin: `0.5vw 0`,
+                                      // fontSize: '30px'
                                   }}/>
                         </Grid>
                         <Grid item>
-                            <Typography className={classes.font} variant="body2" color="textSecondary">
+                            <Typography className={classes.font} variant="body2" >
                                 {post.node.frontmatter.typeHeader}
                         </Typography>
                         </Grid>
                     </Grid>
-                    <Grid container justify="space-between" alignItems="center" spacing={1}>
+                    <Grid container justify="space-between" alignItems="center">
                         <Grid item>
-                            <Typography className={classes.font}  variant="h5"  style={{fontWeight:'bold', fontSize:'30px'}}>
+                            <Typography className={classes.font}  variant="h5"  style={{
+                                fontWeight:'bold',
+                                fontSize:'32px',
+                                color: '#2253d6'
+                            }}>
                                 {post.node.frontmatter.company}
                             </Typography>
                         </Grid>
                     </Grid>
-                    <Grid container justify="space-between" alignItems="center" spacing={1}>
+                    <Grid container justify="space-between"  alignItems="center" spacing={1} style={{
+                        color:'#1b3c95',
+                        paddingBottom: '0.5rem'
+                    }}>
                         <Grid item>
-                            <Typography className={classes.font} variant="body2" color="textSecondary" style={{paddingBottom: '1rem', fontWeight: 'bold'}}>
+                            <Typography className={classes.sansFont} variant="body2" style={{fontWeight:'bold'}}>
                                 {post.node.frontmatter.title}
                             </Typography>
                         </Grid>
                         <Grid item>
-                            <Typography className={classes.font} variant="body2" color="textSecondary" style={{paddingBottom: '1rem', fontWeight: 'bold'}}>
+                            <Typography className={classes.sansFont} variant="body2" style={{fontWeight:'bold'}}>
                                 {post.node.frontmatter.location}
                             </Typography>
                         </Grid>
                     </Grid>
-                    <Typography className={classes.font} variant="body2" color="textSecondary">
+                    <Typography
+                        className={classes.sansFont}
+                        variant="body2"
+                        style={{
+                            fontSize: '14px',
+                        }}
+                    >
                         <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
                     </Typography>
                 </CardContent>
                 <CardActions style={{
                     marginLeft: `1.5vw`,
                 }}>
-                    <Typography className={classes.font} style={{
+                    <Typography
+                        className={classes.sansFont}
+                        color="textSecondary"
+                        style={{
+                            fontSize:'14px',
+                            padding: '0.5rem 0'
                     }}>
                         {post.node.frontmatter.dates}
                     </Typography>

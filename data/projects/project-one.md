@@ -10,4 +10,4 @@ image: "../../florizel.jpg"
 
 ---
 
-Competed internationally in student underwater robotics team developing advanced computer vision and networking software
+Competed internationally in an underwater robotics team developing advanced computer vision and networking software
