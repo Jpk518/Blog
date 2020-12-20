@@ -32,6 +32,22 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+            trackingId: "UA-114926086-1",
+            // Defines where to place the tracking script - `true` in the head and `false` in the body
+            head: false,
+            anonymize: true,
+            respectDNT: true,
+            // Delays sending pageview hits on route update (in milliseconds)
+            pageTransitionDelay: 0,
+            defer: false,
+            // Any additional optional fields
+            sampleRate: 5,
+            siteSpeedSampleRate: 10,
+        },
     }
   ],
 }
