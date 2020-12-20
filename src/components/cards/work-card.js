@@ -10,7 +10,6 @@ import WorkIcon from '@material-ui/icons/Work';
 import cardStyles from "./card-style";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import IconButton from "@material-ui/core/IconButton";
-import * as toast from "react-hot-toast";
 import {useSnackbar} from "notistack";
 
 const WorkCard = ({post}) => {
@@ -115,7 +114,7 @@ const WorkCard = ({post}) => {
                         <Grid item>
                             <IconButton size="small" onClick={() => enqueueSnackbar('Details view in progress')}>
                                 <AddCircleIcon style={{
-                                    fontSize: '35px',
+                                    fontSize: '32px',
                                     color: '#ffdb13',
                                     backgroundColor: '#0053D6',
                                     borderRadius: '50px'
