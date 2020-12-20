@@ -6,6 +6,12 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import './index.css'
 import Projects from "../components/cards/projects";
+import ReactGA from 'react-ga';
+
+const trackingId = "UA-114926086-1";
+ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 const IndexPage = () => {
     return (
