@@ -8,10 +8,15 @@ import Grid from "@material-ui/core/Grid";
 import {animated, useSpring} from "react-spring";
 import WorkIcon from '@material-ui/icons/Work';
 import cardStyles from "./card-style";
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import IconButton from "@material-ui/core/IconButton";
+import * as toast from "react-hot-toast";
+import {useSnackbar} from "notistack";
 
 const WorkCard = ({post}) => {
     const classes = cardStyles();
     const AnimatedCard = animated(Card)
+    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
     const [active, setActive] = React.useState(false);
     const spring = useSpring({
         transform: active ? 'translateY(-10px)' : 'translateY(0px)',
@@ -31,6 +36,7 @@ const WorkCard = ({post}) => {
                 style={spring}
             >
                 <CardMedia
+                    onClick={() => enqueueSnackbar('Details view in progress')}
                     component="img"
                     alt="Work"
                     height="250"
@@ -52,7 +58,7 @@ const WorkCard = ({post}) => {
                                   }}/>
                         </Grid>
                         <Grid item>
-                            <Typography className={classes.font} variant="body2" >
+                            <Typography className={classes.font} color="textSecondary" variant="body2" >
                                 {post.node.frontmatter.typeHeader}
                         </Typography>
                         </Grid>
@@ -93,17 +99,30 @@ const WorkCard = ({post}) => {
                     </Typography>
                 </CardContent>
                 <CardActions style={{
-                    marginLeft: `1.5vw`,
+                    margin: `0 1.5vw 0.5vw 1.5vw`,
                 }}>
-                    <Typography
-                        className={classes.sansFont}
-                        color="textSecondary"
-                        style={{
-                            fontSize:'14px',
-                            padding: '0.5rem 0'
-                    }}>
-                        {post.node.frontmatter.dates}
-                    </Typography>
+                    <Grid container justify="space-between" alignItems="center">
+                        <Grid item>
+                            <Typography
+                                className={classes.sansFont}
+                                color="textSecondary"
+                                style={{
+                                    fontSize:'14px',
+                            }}>
+                                {post.node.frontmatter.dates}
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <IconButton size="small" onClick={() => enqueueSnackbar('Details view in progress')}>
+                                <AddCircleIcon style={{
+                                    fontSize: '35px',
+                                    color: '#ffdb13',
+                                    backgroundColor: '#0053D6',
+                                    borderRadius: '50px'
+                                }}/>
+                            </IconButton>
+                        </Grid>
+                    </Grid>
                 </CardActions>
             </AnimatedCard>
         </Grid>

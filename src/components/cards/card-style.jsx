@@ -8,7 +8,8 @@ const cardStyles = makeStyles({
     border: 'none',
     boxShadow: 'none',
     background: '#fde6f0',
-    color: '#1b3c95',
+    color: '#1b3c95', // #0053D6
+    borderRadius: 0,
   },
   title: {
     fontSize: 14,
