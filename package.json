@@ -7,6 +7,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.1",
     "@material-ui/icons": "^4.11.2",
+    "dotenv": "^8.2.0",
     "fontsource-bree-serif": "^3.0.9",
     "fontsource-castoro": "^3.0.1",
     "fontsource-roboto": "^3.0.3",
