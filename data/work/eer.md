@@ -9,4 +9,4 @@ location: "St. John's, NL"
 image: "../../florizel.jpg"
 ---
 
-Competed internationally in an underwater robotics team developing advanced computer vision and networking software
+Competed internationally in an underwater robotics team developing advanced computer vision/networking software
