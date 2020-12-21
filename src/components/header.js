@@ -33,28 +33,32 @@ const Header = () => {
             <div className={classes.sizing}>
                 <Grid container alignItems="center" justify="center" >
                     <Grid item xs={8} style={{paddingBottom: '5rem', paddingTop: '0'}}>
-                        This site is under construction while porting to a new layout :)
+                        This site is missing a few details while porting to a new layout :)
                         <br />
-                        To see a complete view of my projects, experience, etc, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
+                        For a complete view of projects and experience, please visit my <a href="https://www.linkedin.com/in/joshua-kearney/" style={{color: '#2c87f0', textDecoration: 'none'}}>LinkedIn</a>
                     </Grid>
                 </Grid>
 
                 <Grid container alignContent="space-between" alignItems="center" justify="center" spacing={10}>
-                    <Grid item xs={4}>
-                        <h1 className={classes.heading}>
-                            Hey, I'm Josh
-                        </h1>
-                        <Typewriter
-                            options={{
-                                strings: ['Software Engineer.', 'Cloud Architect.', 'Designer & Creator.'],
-                                autoStart: true,
-                                loop: true,
-                                pauseFor: 3000,
-                            }}
-                        />
+                    <Grid item xs={12} s={4} md={4} lg={4} >
+                        <Grid container justify="center">
+                            <Grid item>
+                                    <h1 className={classes.heading}>
+                                        Hey, I'm Josh
+                                    </h1>
+                                    <Typewriter
+                                        options={{
+                                            strings: ['Software Engineer.', 'Cloud Architect.', 'Designer & Creator.'],
+                                            autoStart: true,
+                                            loop: true,
+                                            pauseFor: 3000,
+                                        }}
+                                    />
+                            </Grid>
+                        </Grid>
                     </Grid>
 
-                    <Grid item xs={4}>
+                    <Grid item xs={12} s={4} md={4} lg={4}>
                         <Grid container direction="column" alignItems="center">
                             <Grid item>
                                 <img style={{height: '250px', borderRadius: '50%'}} src="../../me.jpg" />
