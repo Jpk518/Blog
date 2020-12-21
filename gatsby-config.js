@@ -44,7 +44,7 @@ module.exports = {
                       family: 'Castoro',
                   },
                   {
-                      family: 'Playfair Display'
+                      family: 'Playfair+Display'
                   },
                   {
                       family: 'Montserrat'
