@@ -6,18 +6,15 @@ const cardStyles = makeStyles({
     maxWidth: 400,
     minHeight: 500,
     border: 'none',
-    // boxShadow: 'none',
-    color: '#1b3c95', // #0053D6
+    color: '#1b3c95',
     borderRadius: 5,
     boxShadow: '0 8px 40px -12px rgba(0,0,0,0.3)',
   },
   workColor: {
-    // background: '#FDE6F0',
     background: '#FEEACC',
 
   },
   projectColor: {
-    // background: '#FDE6F0',
     background: '#FEEACC',
   },
   title: {
@@ -27,7 +24,7 @@ const cardStyles = makeStyles({
     fontFamily: 'Castoro',
   },
   sansFont: {
-    fontFamily: 'Open Sans',
+    fontFamily: 'Montserrat',
   },
 });
 

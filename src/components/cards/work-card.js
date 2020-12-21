@@ -18,7 +18,7 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 const WorkCard = ({post}) => {
     const classes = cardStyles();
     const AnimatedCard = animated(Card)
-    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+    const { enqueueSnackbar } = useSnackbar();
     const [active, setActive] = React.useState(false);
     const spring = useSpring({
         transform: active ? 'translateY(-10px)' : 'translateY(0px)',
@@ -31,7 +31,8 @@ const WorkCard = ({post}) => {
     });
 
     const cardDetails = () => {
-        return enqueueSnackbar('View under construction')
+        // return enqueueSnackbar('View under construction')
+        return null;
     };
 
     return (
