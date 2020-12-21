@@ -59,7 +59,7 @@ const Header = () => {
                             <Grid item>
                                 <img style={{height: '250px', borderRadius: '50%'}} src="../../me.jpg" />
                             </Grid>
-                            <Grid item><Button variant="outlined" color="inherit" style={{borderRadius: '0'}}> Resume </Button></Grid>
+                            <Grid item><Button href="../../resume.pdf" variant="outlined" color="inherit" style={{borderRadius: '0'}}> Resume </Button></Grid>
                         </Grid>
                     </Grid>
                 </Grid>
