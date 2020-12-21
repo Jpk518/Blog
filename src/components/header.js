@@ -3,6 +3,7 @@ import React from "react"
 import Typewriter from 'typewriter-effect';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 
 const bgColor = `rgb(20, 35, 75)`
 const useStyles = makeStyles({
@@ -45,15 +46,21 @@ const Header = () => {
                         </h1>
                         <Typewriter
                             options={{
-                                strings: ['Junior Engineer.', 'Software Developer.', 'Designer & Creator.'],
+                                strings: ['Software Engineer.', 'Cloud Architect.', 'Designer & Creator.'],
                                 autoStart: true,
                                 loop: true,
                                 pauseFor: 3000,
                             }}
                         />
                     </Grid>
+
                     <Grid item xs={4}>
-                        <img style={{height: '250px', borderRadius: '50%'}} src="../../me.jpg" />
+                        <Grid container direction="column" alignItems="center">
+                            <Grid item>
+                                <img style={{height: '250px', borderRadius: '50%'}} src="../../me.jpg" />
+                            </Grid>
+                            <Grid item><Button variant="outlined" color="inherit" style={{borderRadius: '0'}}> Resume </Button></Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </div>

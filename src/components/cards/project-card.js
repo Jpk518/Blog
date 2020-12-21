@@ -25,9 +25,10 @@ const ProjectCard = ({post}) => {
     return (
         <Grid key={ post.node.id } item>
             <AnimatedCard
-                className={classes.root}
+                className={`${classes.root} ${classes.projectColor}`}
                 onMouseOver={() => setActive(true)}
                 onMouseOut={() => setActive(false)}
+                raised="true"
                 style={spring}
             >
                 <CardMedia

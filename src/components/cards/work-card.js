@@ -11,6 +11,9 @@ import cardStyles from "./card-style";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import IconButton from "@material-ui/core/IconButton";
 import {useSnackbar} from "notistack";
+import ButtonBase from "@material-ui/core/ButtonBase";
+
+
 
 const WorkCard = ({post}) => {
     const classes = cardStyles();
@@ -26,25 +29,31 @@ const WorkCard = ({post}) => {
             clamp: true
         },
     });
+
+    const cardDetails = () => {
+        return enqueueSnackbar('View under construction')
+    };
+
     return (
         <Grid key={ post.node.id } item>
             <AnimatedCard
-                className={classes.root}
+                className={`${classes.root} ${classes.workColor}`}
                 onMouseOver={() => setActive(true)}
                 onMouseOut={() => setActive(false)}
                 style={spring}
             >
-                <CardMedia
-                    onClick={() => enqueueSnackbar('Details view in progress')}
-                    component="img"
-                    alt="Work"
-                    height="250"
-                    src={post.node.frontmatter.image}
-                    title="Work"
-                    style={{
-                        margin: `0`,
-                    }}
-                />
+                <ButtonBase onClick={() => cardDetails()}>
+                    <CardMedia
+                        component="img"
+                        alt="Work"
+                        height="250"
+                        src={post.node.frontmatter.image}
+                        title="Work"
+                        style={{
+                            margin: `0`,
+                        }}
+                    />
+                </ButtonBase>
                 <CardContent style={{
                     margin: `0 1vw 0`,
                 }}>
@@ -53,6 +62,7 @@ const WorkCard = ({post}) => {
                         <WorkIcon color="secondary"
                                   style={{
                                       margin: `0.5vw 0`,
+                                      color: 'FF5F19',
                                       // fontSize: '30px'
                                   }}/>
                         </Grid>
@@ -64,12 +74,14 @@ const WorkCard = ({post}) => {
                     </Grid>
                     <Grid container justify="space-between" alignItems="center">
                         <Grid item>
-                            <Typography className={classes.font}  variant="h5"  style={{
-                                fontWeight:'bold',
-                                fontSize:'33px',
-                            }}>
-                                {post.node.frontmatter.company}
-                            </Typography>
+                            <ButtonBase disableRipple="true" onClick={() => cardDetails()}>
+                                <Typography className={classes.font}  variant="h5"  style={{
+                                    fontWeight:'bold',
+                                    fontSize:'33px',
+                                }}>
+                                    {post.node.frontmatter.company}
+                                </Typography>
+                            </ButtonBase>
                         </Grid>
                     </Grid>
                     <Grid container justify="space-between"  alignItems="center" spacing={1} style={{
@@ -112,11 +124,12 @@ const WorkCard = ({post}) => {
                             </Typography>
                         </Grid>
                         <Grid item>
-                            <IconButton size="small" onClick={() => enqueueSnackbar('Details view in progress')}>
+                            <IconButton size="small" onClick={() => cardDetails()}>
                                 <AddCircleIcon style={{
                                     fontSize: '32px',
-                                    color: '#ffdb13',
-                                    backgroundColor: '#0053D6',
+                                    color: '#FF5F19',
+                                    // color: '#ffdb13',
+                                    // backgroundColor: '#0053D6',
                                     borderRadius: '50px'
                                 }}/>
                             </IconButton>
