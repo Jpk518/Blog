@@ -9,4 +9,4 @@ location: "Ottawa, On"
 image: "../../gd_screen.png"
 ---
 
-Developed an internal embedded networking software for next-gen military vehicle smart display technology using
+Developed an internal embedded networking software for next-gen military vehicle smart display technology

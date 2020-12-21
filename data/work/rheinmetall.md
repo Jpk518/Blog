@@ -9,4 +9,4 @@ location: "Unterluess, Germany"
 image: "../../package.png"
 ---
 
-Developed a proprietary electronic packaging system for the Puma IFV tank communication network
+Designed and created a proprietary electronic packaging system for a vehicle communication network

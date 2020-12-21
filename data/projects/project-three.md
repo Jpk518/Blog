@@ -7,4 +7,4 @@ image: "../../twit.png"
 
 ---
 
-As part of a local hackday team, developed the front end and chrome framework of a chrome extension that allows to tweet while on any site using an extension button
+As part of a local hackday team, developed the front end and framework of a chrome extension that allows to tweet from any tab
