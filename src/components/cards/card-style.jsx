@@ -27,7 +27,7 @@ const cardStyles = makeStyles({
     fontFamily: 'Castoro',
   },
   sansFont: {
-    fontFamily: 'Montserrat',
+    fontFamily: 'Open Sans',
   },
 });
 
