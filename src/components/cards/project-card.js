@@ -49,11 +49,11 @@ const ProjectCard = ({post}) => {
                             <WorkIcon color="secondary"
                                       style={{
                                           margin: `0.5vw 0`,
-                                          // fontSize: '30px'
+                                          // color: 'FF5F19',
                                       }}/>
                         </Grid>
                         <Grid item>
-                            <Typography className={classes.font} variant="body2" >
+                            <Typography className={classes.font} color="textSecondary" variant="body2" >
                                 {post.node.frontmatter.typeHeader}
                             </Typography>
                         </Grid>
@@ -61,24 +61,10 @@ const ProjectCard = ({post}) => {
                     <Typography className={classes.font} gutterBottom variant="h5"  style={{fontWeight:'bold', fontSize:'30px'}}>
                         {post.node.frontmatter.title}
                     </Typography>
-                    <Typography className={classes.font} variant="body2" color="textSecondary">
+                    <Typography className={classes.sansFont} variant="body2" color="textSecondary">
                         <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
                     </Typography>
                 </CardContent>
-                <CardActions style={{
-                    marginLeft: `1.5vw`,
-                }}>
-                    <Typography className={classes.font} style={{
-                    }}>
-                        {post.node.frontmatter.dates}
-                    </Typography>
-                    <Typography className={classes.font} style={{
-                        marginLeft: `3vw`,
-                    }}>
-                        {post.node.frontmatter.location}
-                    </Typography>
-
-                </CardActions>
             </AnimatedCard>
         </Grid>
     );

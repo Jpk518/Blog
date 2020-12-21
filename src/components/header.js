@@ -17,6 +17,8 @@ const useStyles = makeStyles({
         padding: `3rem 1rem 10rem`,
     },
     heading: {
+        fontFamily: 'Playfair Display',
+        fontWeight: 'bold',
         marginBottom: 15,
         fontSize: 40,
     },
@@ -61,7 +63,7 @@ const Header = () => {
                     <Grid item xs={12} s={4} md={4} lg={4}>
                         <Grid container direction="column" alignItems="center">
                             <Grid item>
-                                <img style={{height: '250px', borderRadius: '50%'}} src="../../me.jpg" />
+                                <img style={{height: '225px', borderRadius: '50%'}} src="../../me.jpg" />
                             </Grid>
                             <Grid item><Button href="../../resume.pdf" variant="outlined" color="inherit" style={{borderRadius: '0'}}> Resume </Button></Grid>
                         </Grid>

@@ -9,4 +9,4 @@ location: "St. John's, NL"
 image: "../../verafin.jpg"
 ---
 
-Currently, designing and creating innovative cloud solutions to power industry leading financial crime fighting software
+Designing and creating innovative cloud solutions to power industry leading financial crime fighting software

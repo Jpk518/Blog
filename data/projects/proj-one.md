@@ -7,4 +7,4 @@ image: "../../futurama.jpg"
 
 ---
 
-Designed and manufactured a custom neon glowing Futurama wall sign using CorelDraw software and a C02 Laser engraver
+Designed and manufactured a custom neon glowing Futurama wall sign with a C02 Laser engraver
