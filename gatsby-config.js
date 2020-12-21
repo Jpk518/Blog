@@ -42,13 +42,13 @@ module.exports = {
               fonts: [
                   {
                       family: 'Castoro',
-                  }
-                  // {
-                  //     family: 'Playfair Display'
-                  // },
-                  // {
-                  //     family: 'Montserrat'
-                  // }
+                  },
+                  {
+                      family: 'Playfair Display'
+                  },
+                  {
+                      family: 'Montserrat'
+                  },
                   ]
           }
 
