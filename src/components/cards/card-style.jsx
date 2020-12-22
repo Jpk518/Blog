@@ -6,7 +6,7 @@ const cardStyles = makeStyles({
     maxWidth: 400,
     minHeight: 500,
     border: 'none',
-    color: '#1b3c95',
+    color: '#0C2444',
     borderRadius: 5,
     boxShadow: '0 8px 40px -12px rgba(0,0,0,0.3)',
   },

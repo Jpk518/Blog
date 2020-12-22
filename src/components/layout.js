@@ -22,7 +22,7 @@ const useStyles = makeStyles({
         marginTop: '6vw',
         width: '100vw',
         paddingTop: `2rem`,
-        background: `rgb(20, 35, 75)`,
+        background: '#24292D',
     }
 });
 

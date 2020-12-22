@@ -21,7 +21,7 @@ const WorkCard = ({post}) => {
     const { enqueueSnackbar } = useSnackbar();
     const [active, setActive] = React.useState(false);
     const spring = useSpring({
-        transform: active ? 'translateY(-10px)' : 'translateY(0px)',
+        transform: active ? 'translateY(-5px)' : 'translateY(0px)',
         config: {
             mass: 1,
             tension: 300,
@@ -31,8 +31,7 @@ const WorkCard = ({post}) => {
     });
 
     const cardDetails = () => {
-        // return enqueueSnackbar('View under construction')
-        return null;
+        return enqueueSnackbar('View under construction')
     };
 
     return (
