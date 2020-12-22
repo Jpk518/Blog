@@ -42,7 +42,7 @@ const Header = () => {
                                     </h1>
                                     <Typewriter
                                         options={{
-                                            strings: ['Software Engineer.', 'Cloud Architect.', 'Designer & Creator.'],
+                                            strings: ['Junior Engineer.', 'Cloud Software Developer.', 'Designer & Creator.'],
                                             autoStart: true,
                                             loop: true,
                                             pauseFor: 3000,

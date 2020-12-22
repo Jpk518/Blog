@@ -10,6 +10,13 @@ const cardStyles = makeStyles({
     borderRadius: 5,
     boxShadow: '0 8px 40px -12px rgba(0,0,0,0.3)',
   },
+  sectionTitle: {
+    color: '#0C2444',
+    fontFamily: 'Playfair Display',
+    fontWeight: 'bold',
+    fontSize: '46px',
+    paddingBottom: '0rem',
+  },
   workColor: {
     background: '#FEEACC',
 
