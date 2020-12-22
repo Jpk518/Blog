@@ -48,6 +48,7 @@ const WorkCard = ({post}) => {
                         alt="Work"
                         height="250"
                         src={post.node.frontmatter.image}
+                        draggable="false"
                         title="Work"
                         style={{
                             margin: `0`,
@@ -102,9 +103,6 @@ const WorkCard = ({post}) => {
                         className={classes.sansFont}
                         variant="body2"
                         color="textSecondary"
-                        style={{
-                            fontSize: '15px',
-                        }}
                     >
                         <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
                     </Typography>

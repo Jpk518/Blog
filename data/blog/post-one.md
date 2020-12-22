@@ -1,10 +1,12 @@
 ---
 type: "blog"
-title: "Hello World"
+typeHeader: "Blog Post"
+title: "Test Blog Post"
 date: "2020-12-13"
 author: "Joshua Kearney"
 image: "../../blog-one.png"
 
 ---
 
-Hello world this is my first blog post
+Test blog post content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sed.
+

@@ -33,8 +33,9 @@ const ProjectCard = ({post}) => {
                 <CardMedia
                     component="img"
                     alt="Project"
-                    height="375"
+                    height="350"
                     src={post.node.frontmatter.image}
+                    draggable="false"
                     title="Work"
                     style={{
                         margin: `0`,

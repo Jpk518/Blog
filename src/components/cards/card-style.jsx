@@ -32,6 +32,7 @@ const cardStyles = makeStyles({
   },
   sansFont: {
     fontFamily: 'Montserrat',
+    fontSize: '15px',
   },
 });
 

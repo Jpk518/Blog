@@ -4,6 +4,7 @@ import Work from "../components/cards/work";
 import './index.css'
 import Projects from "../components/cards/projects";
 import {SnackbarProvider} from "notistack";
+import Blog from "../components/cards/blog";
 
 const IndexPage = () => {
     return (
@@ -11,6 +12,7 @@ const IndexPage = () => {
             <Layout>
                 <Work />
                 <Projects />
+                <Blog />
             </Layout>
         </SnackbarProvider>
     )

@@ -33,7 +33,7 @@ const Projects = () => {
                     <Grid item className={classes.sectionTitle}>
                         <Grid container direction="column" alignItems="center">
                             Projects
-                            <img style={{height: '50px'}} src="../underline.png" />
+                            <img style={{height: '50px'}} src="../underline.png" draggable="false"/>
                         </Grid>
                     </Grid>
                 </Grid>
