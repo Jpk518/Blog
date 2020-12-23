@@ -1,8 +1,8 @@
 ---
 type: "project"
-typeHeader: "Python Data Wrangler"
-title: "Twitter Remote Poster"
-date: "2017-06-05"
+typeHeader: "Personal Project"
+title: "Portfolio Websites"
+date: "2020-01-01"
 image: "../../portfolio.png"
 
 ---
