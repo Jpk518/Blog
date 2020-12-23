@@ -2,9 +2,8 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 
 const cardStyles = makeStyles({
   root: {
-    minWidth: '10vw',
-    maxWidth: 400,
-    minHeight: 500,
+    width: 400,
+    minHeight: 300,
     border: 'none',
     color: '#0C2444',
     borderRadius: 5,
@@ -19,10 +18,10 @@ const cardStyles = makeStyles({
   },
   workColor: {
     background: '#FEEACC',
-
   },
-  projectColor: {
+  projectCard: {
     background: '#FEEACC',
+    minHeight: '300px',
   },
   title: {
     fontSize: 14,

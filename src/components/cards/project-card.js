@@ -24,7 +24,7 @@ const ProjectCard = ({post}) => {
     return (
         <Grid key={ post.node.id } item>
             <AnimatedCard
-                className={`${classes.root} ${classes.projectColor}`}
+                className={`${classes.root} ${classes.projectCard}`}
                 onMouseOver={() => setActive(true)}
                 onMouseOut={() => setActive(false)}
                 raised="true"
