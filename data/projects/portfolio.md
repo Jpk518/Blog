@@ -3,7 +3,7 @@ type: "project"
 typeHeader: "Personal Project"
 title: "Portfolio Websites"
 date: "2020-01-01"
-image: "../../portfolio.png"
+image: "../../portfolio.jpg"
 
 ---
 
