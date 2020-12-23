@@ -33,7 +33,7 @@ const ProjectCard = ({post}) => {
                 <CardMedia
                     component="img"
                     alt="Project"
-                    height="350"
+                    height="250"
                     src={post.node.frontmatter.image}
                     draggable="false"
                     title="Work"
@@ -49,7 +49,6 @@ const ProjectCard = ({post}) => {
                             <WorkIcon color="secondary"
                                       style={{
                                           margin: `0.5vw 0`,
-                                          // color: 'FF5F19',
                                       }}/>
                         </Grid>
                         <Grid item>

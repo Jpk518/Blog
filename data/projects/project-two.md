@@ -3,7 +3,7 @@ type: "project"
 typeHeader: "Personal Project"
 title: "Magnetic Reading Lamp"
 date: "2017-06-05"
-image: "../../lamp.jpg"
+image: "../../lamp_two.jpg"
 
 ---
 

@@ -7,16 +7,17 @@ import CardActions from "@material-ui/core/CardActions";
 import Grid from "@material-ui/core/Grid";
 import {animated, useSpring} from "react-spring";
 import BookIcon from '@material-ui/icons/Book';
-import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import IconButton from "@material-ui/core/IconButton";
 import cardStyles from "./card-style";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import ButtonBase from "@material-ui/core/ButtonBase";
-import WorkIcon from "@material-ui/icons/Work";
+import {useSnackbar} from "notistack";
 
 const BlogCard = ({post}) => {
     const classes = cardStyles();
     const AnimatedCard = animated(Card)
+    const { enqueueSnackbar } = useSnackbar();
+
     const [active, setActive] = React.useState(false);
     const spring = useSpring({
         transform: active ? 'translateY(-10px)' : 'translateY(0px)',
@@ -27,6 +28,11 @@ const BlogCard = ({post}) => {
             clamp: true
         },
     });
+
+    const cardDetails = () => {
+        return enqueueSnackbar('View under construction')
+    };
+
     return (
         <Grid key={ post.node.id } item>
             <AnimatedCard

@@ -4,7 +4,7 @@ typeHeader: "Blog Post"
 title: "Test Blog Post"
 date: "2020-12-13"
 author: "Joshua Kearney"
-image: "../../blog-one.png"
+image: "../../blog-one.jpg"
 
 ---
 

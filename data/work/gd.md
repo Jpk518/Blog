@@ -6,7 +6,7 @@ title: "Software Engineering Intern"
 date: "2018-12-01"
 dates: "Sep 2018-Dec 2018"
 location: "Ottawa, On"
-image: "../../gd_screen.png"
+image: "../../gd_screen.jpg"
 ---
 
 Developed an internal embedded networking software for next-gen military vehicle smart display technology
