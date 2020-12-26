@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "gatsby"
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -93,13 +94,15 @@ const BlogCard = ({post}) => {
                             </Typography>
                         </Grid>
                         <Grid item>
-                            <IconButton size="small" onClick={() => cardDetails()}>
-                                <AddCircleIcon style={{
-                                    fontSize: '32px',
-                                    color: '#FF5F19',
-                                    borderRadius: '50px'
-                                }}/>
-                            </IconButton>
+                            <Link to="/blog/blog-one">
+                                <IconButton size="small" >
+                                    <AddCircleIcon style={{
+                                        fontSize: '32px',
+                                        color: '#FF5F19',
+                                        borderRadius: '50px'
+                                    }}/>
+                                </IconButton>
+                            </Link>
                         </Grid>
                     </Grid>
                 </CardActions>
