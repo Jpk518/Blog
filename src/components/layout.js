@@ -13,6 +13,7 @@ import Header from "./header"
 import "./layout.css"
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
+import {OutboundLink} from "gatsby-plugin-google-analytics";
 
 const useStyles = makeStyles({
     layout: {
@@ -52,13 +53,13 @@ const Layout = ({ children }) => {
                 spacing={2}
             >
                 <Grid item>
-                    <a href="https://www.goodreads.com/user/show/41209622-josh-kearney"><img src="../../book.svg"/></a>
+                    <OutboundLink href="https://www.goodreads.com/user/show/41209622-josh-kearney"><img src="../../book.svg"/></OutboundLink>
                 </Grid>
                 <Grid item>
-                    <a href="https://www.linkedin.com/in/joshua-kearney/"><img src="../../linkedin.svg"/></a>
+                    <OutboundLink href="https://www.linkedin.com/in/joshua-kearney/"><img src="../../linkedin.svg"/></OutboundLink>
                 </Grid>
                 <Grid item>
-                    <a href="https://github.com/Jpk518"><img src="../../github.svg"/></a>
+                    <OutboundLink href="https://github.com/Jpk518"><img src="../../github.svg"/></OutboundLink>
                 </Grid>
             </Grid>
         </footer>
