@@ -5,9 +5,10 @@ const cardStyles = makeStyles({
     width: 400,
     minHeight: 300,
     border: 'none',
-    color: '#0C2444',
-    borderRadius: 5,
-    boxShadow: '0 8px 40px -12px rgba(0,0,0,0.3)',
+    color: '#000000',
+    borderRadius: 0,
+    boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
+    // boxShadow: 'none',
   },
   sectionTitle: {
     color: '#0C2444',

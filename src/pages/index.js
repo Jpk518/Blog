@@ -9,7 +9,7 @@ import Blog from "../components/cards/blog";
 const IndexPage = () => {
     return (
         <SnackbarProvider maxSnack={3}>
-            <Layout>
+            <Layout >
                 <Work />
                 <Projects />
                 <Blog />
