@@ -8,10 +8,12 @@ import {OutboundLink} from "gatsby-plugin-google-analytics";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import CardMedia from "@material-ui/core/CardMedia";
 
-const primaryColor = '#4D202F';
-const secondaryColor = '#FEEACB';
-const blueColor = '#0C2444';
+const primaryColor = '#FFFFFF';
+const secondaryColor = '#161B22';
+const tertiaryColor = '#4D202F';
 const textColor = '#444444';
+const ylwColor = '#FEEACC';
+const blueColor = '#FEEACC';
 const blogStyles = makeStyles({
     heading: {
         background: '#221E1F',
@@ -37,9 +39,20 @@ const blogStyles = makeStyles({
         borderRadius: '10px',
     },
     titleCard: {
-        backgroundColor: secondaryColor, //4D202F
         width: '30vw',
-        color: blueColor, //#F0F5F5
+        color: textColor, //#F0F5F5
+        backgroundColor: ylwColor, //4D202F
+    },
+    returnBox: {
+        fontFamily: 'Montserrat',
+        fontWeight: 'bold',
+        fontSize: '20px',
+        padding: '1.2vw',
+        color: secondaryColor,
+        '&:hover': {
+            color: ylwColor,
+            background: tertiaryColor,
+        },
     },
     header: {
         paddingTop: '1.5rem',
@@ -48,19 +61,6 @@ const blogStyles = makeStyles({
         fontWeight: 'bold',
         fontSize: '42px',
     },
-    returnBox: {
-        fontFamily: 'Montserrat',
-        fontWeight: 'bold',
-        fontSize: '24px',
-        padding: '1.5vw',
-        color: textColor,
-        background: 'ffdead',
-        '&:hover': {
-            background: primaryColor,
-            color: secondaryColor,
-            boxShadow: '0 8px 40px -12px rgba(0,0,0,0.3)',
-        },
-    },
     headerTwo: {
         fontFamily: 'Playfair Display',
         fontWeight: 'bold',
@@ -68,14 +68,15 @@ const blogStyles = makeStyles({
     },
     baseCard: {
         // backgroundColor: '#fff2df',
-        backgroundColor: '#FFFFFF',
-        color: '#444444',
+        backgroundColor: primaryColor,
+        color: textColor,
         width: '62.5vw',
+        position: 'relative'
     },
     scroll: {
         flexGrow: '1',
         overflow: 'scroll',
-        height: '87.5%',
+        height: '100%',
         width: '62.5vw',
         overflowX: 'hidden',
         position: 'absolute',
@@ -108,13 +109,13 @@ const Blog = () => {
                 </Grid>
             </Grid>
             <Grid container justify="space-between" className={classes.layout}>
-                <Grid item raised="false">
+                <Grid item >
                     <Card className={`${classes.card} ${classes.titleCard}`}>
                         <CardMedia
                             component="img"
                             alt="img"
                             height="250"
-                            src={"../../blog-one.jpg"}
+                            src={"../../music.jpg"}
                             draggable="false"
                             title="Work"
                             style={{
@@ -141,7 +142,7 @@ const Blog = () => {
                         </Grid>
                     </Card>
                 </Grid>
-                <Grid item>
+                <Grid item >
                     <Card className={`${classes.card} ${classes.baseCard}`}>
                             <Grid container justify="center" >
                                 <Grid item className={classes.scroll}>
