@@ -18,6 +18,8 @@ import {OutboundLink} from "gatsby-plugin-google-analytics";
 const useStyles = makeStyles({
     layout: {
         margin: `0 auto`,
+        overflowX: 'hidden',
+        overflowY: 'hidden',
     },
     footer: {
         marginTop: '6vw',

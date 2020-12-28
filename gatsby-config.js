@@ -49,6 +49,9 @@ module.exports = {
                   {
                       family: 'Montserrat'
                   },
+                  {
+                      family: 'Charter BT'
+                  },
                   ]
           }
 

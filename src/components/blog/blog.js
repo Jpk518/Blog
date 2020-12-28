@@ -1,10 +1,11 @@
 import React from 'react';
 import Grid from "@material-ui/core/Grid";
-import {Link} from "gatsby"
+import {graphql, Link, useStaticQuery} from "gatsby"
 
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import {OutboundLink} from "gatsby-plugin-google-analytics";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Divider from "@material-ui/core/Divider";
 
 const primaryColor = '#FFFFFF';
 const textColor = '#000000';
@@ -28,7 +29,7 @@ const blogStyles = makeStyles({
         color: primaryColor,
     },
     layout: {
-        paddingTop: '3.2vw',
+        paddingTop: '6vh', // 6 for top
     },
     card: {
         height: '94vh',
@@ -38,32 +39,53 @@ const blogStyles = makeStyles({
         position: 'relative'
     },
     header: {
-        paddingTop: '1.5rem',
-        paddingLeft: '1rem',
         fontFamily: 'Playfair Display',
-        fontWeight: 'bold',
+        // fontWeight: 'bold',
         fontSize: '42px',
+        lineHeight: '1.2',
+        margin: '1rem'
     },
     headerTwo: {
         fontFamily: 'Playfair Display',
         fontWeight: 'bold',
-        fontSize: '32px',
+        fontSize: '20px',
+        margin: '1vw'
     },
     scroll: {
         overflow: 'scroll',
         height: '100%',
         width: '100%',
         overflowX: 'hidden',
-        position: 'absolute',
     },
     p: {
-       fontFamily: 'Montserrat',
-       fontSize: '16px',
+        fontFamily: 'Charter BT',
+        fontSize: '20px',
+        margin: '1rem'
     },
 });
 
 const Blog = () => {
     const classes = blogStyles();
+
+    const data = useStaticQuery(graphql`
+        query {
+             allMarkdownRemark(sort: {order: DESC, fields: frontmatter___rank}, filter: {frontmatter: {type: {eq: "songs"}}}) {
+                edges {
+                    node {
+                    id
+                        frontmatter {
+                          rank
+                          artist
+                          song
+                          image
+                        }
+                    html
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <div className={classes.background}>
             <Grid container justify="center" className={classes.heading}>
@@ -93,27 +115,33 @@ const Blog = () => {
                     </Grid>
                 </Grid>
             </Grid>
-                <Grid container justify="space-around" className={classes.layout}>
-                    <Grid item xs={11} md={9} lg={7} >
-                        <Grid className={classes.card}>
-                                <Grid item className={classes.scroll}>
-                                    <Grid container direction="column" alignItems="center" spacing={2} style={{marginTop:'3rem'}}>
-                                        <Grid item container className={classes.header} style={{width: '35vw'}}>
-                                            My Fav Songs In All 2020
+                <Grid container justify="center" className={classes.layout}>
+                    <Grid id="center-card" item xs={11} md={9} lg={7} className={classes.card}>
+                        <Grid container justify="center" className={classes.scroll} >
+                            <Grid container direction="column" xs={12} lg={8} spacing={2} style={{marginTop:'3rem', marginBottom:'3rem'}}>
+                                <Grid item className={classes.header}>
+                                    My Top 10 Songs of 2020 <br /> Retrospective of a Year in Music
+                                </Grid>
+                                <Grid item justify="center" lg={11} style={{marginLeft: '1rem'}} >
+                                    <img height="250" width="100%" src="../../music.jpg"/>
+                                </Grid>
+                                <Grid item className={classes.p} >
+                                    With less to do in 2020 it was a bigger year for music, with a lot more songs consumed in my end of the woods. With that, here's a list of my top songs of the year.
+                                </Grid>
+                                <Divider style={{marginBottom: '2rem'}}/>
+
+                                {data.allMarkdownRemark.edges.map(post => (
+                                    <div>
+                                        <Grid container>
+                                            <Grid item xs={5} ><img width="220px" src={post.node.frontmatter.image}/></Grid>
+                                            <Grid xs={7} container direction="column">
+                                                <Grid item className={classes.headerTwo}>{post.node.frontmatter.rank}.</Grid>
+                                                <Grid item className={classes.headerTwo}>{post.node.frontmatter.artist}: "{post.node.frontmatter.song}"</Grid>
+                                            </Grid>
                                         </Grid>
-                                        <Grid item container className={classes.headerTwo} style={{width: '35vw', marginTop:'1rem'}}>
-                                            <img height="100%" src="../../music.jpg"/>
-                                        </Grid>
-                                        <Grid item container className={classes.p} justify="center" style={{width: '35vw'}}>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum dolore dolorem eligendi, eum ex hic illo illum magnam nostrum obcaecati officia possimus quia quibusdam rem sapiente, sint totam ullam veniam vero. Accusantium adipisci dignissimos hic nobis, officia sapiente unde?
-                                        </Grid>
-                                        <Grid item className={classes.p} justify="center" style={{width: '35vw'}}>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex exercitationem maxime nulla obcaecati provident quibusdam tempore veniam voluptate. Consequatur deleniti dignissimos minima recusandae saepe. A ab, atque autem delectus deleniti eos libero maxime minus natus neque, non obcaecati perspiciatis quod rem repellendus repudiandae rerum voluptatum? Alias at consectetur cum cupiditate doloremque ea eos et fuga id impedit inventore, labore maiores nesciunt perspiciatis reiciendis rerum sit suscipit voluptas! Atque delectus dolore doloribus iure, quisquam quos ratione ullam vitae? Alias animi aut, debitis delectus deserunt nihil, pariatur porro sed similique tempora vel vitae? Dolor expedita fugiat in officiis quisquam reiciendis, vero? Accusamus animi eveniet facere facilis itaque labore mollitia odit placeat repellat veniam! Alias aspernatur dolorum ea earum eligendi eum fuga in ipsa iure, minus molestiae necessitatibus numquam qui quidem repellat rerum sapiente suscipit ut velit veniam. Atque porro rerum voluptatem? Ad alias aperiam deleniti dolor et eveniet, laborum modi molestias nam perferendis porro quaerat, quas quisquam quod repellendus repudiandae suscipit tempora voluptas. Aut dolorum ex magni modi necessitatibus nisi optio quae repellat similique suscipit tenetur, vel veritatis. Ab distinctio ducimus, earum eligendi excepturi exercitationem fugiat illo inventore laborum maiores nam optio possimus praesentium quo reiciendis reprehenderit suscipit temporibus unde veniam voluptate!
-                                        </Grid>
-                                        <Grid item className={classes.p} justify="center" style={{width: '35vw'}}>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex exercitationem maxime nulla obcaecati provident quibusdam tempore veniam voluptate. Consequatur deleniti dignissimos minima recusandae saepe. A ab, atque autem delectus deleniti eos libero maxime minus natus neque, non obcaecati perspiciatis quod rem repellendus repudiandae rerum voluptatum? Alias at consectetur cum cupiditate doloremque ea eos et fuga id impedit inventore, labore maiores nesciunt perspiciatis reiciendis rerum sit suscipit voluptas! Atque delectus dolore doloribus iure, quisquam quos ratione ullam vitae? Alias animi aut, debitis delectus deserunt nihil, pariatur porro sed similique tempora vel vitae? Dolor expedita fugiat in officiis quisquam reiciendis, vero? Accusamus animi eveniet facere facilis itaque labore mollitia odit placeat repellat veniam! Alias aspernatur dolorum ea earum eligendi eum fuga in ipsa iure, minus molestiae necessitatibus numquam qui quidem repellat rerum sapiente suscipit ut velit veniam. Atque porro rerum voluptatem? Ad alias aperiam deleniti dolor et eveniet, laborum modi molestias nam perferendis porro quaerat, quas quisquam quod repellendus repudiandae suscipit tempora voluptas. Aut dolorum ex magni modi necessitatibus nisi optio quae repellat similique suscipit tenetur, vel veritatis. Ab distinctio ducimus, earum eligendi excepturi exercitationem fugiat illo inventore laborum maiores nam optio possimus praesentium quo reiciendis reprehenderit suscipit temporibus unde veniam voluptate!
-                                        </Grid>
-                                    </Grid>
+                                        <Divider style={{marginBottom: '2rem',}}/>
+                                    </div>
+                                ))}
                             </Grid>
                         </Grid>
                     </Grid>
