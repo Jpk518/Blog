@@ -6,6 +6,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import {OutboundLink} from "gatsby-plugin-google-analytics";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Divider from "@material-ui/core/Divider";
+import Typography from "@material-ui/core/Typography";
 
 const primaryColor = '#FFFFFF';
 const textColor = '#000000';
@@ -49,7 +50,8 @@ const blogStyles = makeStyles({
         fontFamily: 'Playfair Display',
         fontWeight: 'bold',
         fontSize: '20px',
-        margin: '1vw'
+        // marginTop: '0.5rem',
+        marginBottom: '0.5rem'
     },
     scroll: {
         overflow: 'scroll',
@@ -128,18 +130,25 @@ const Blog = () => {
                                 <Grid item className={classes.p} >
                                     With less to do in 2020 it was a bigger year for music, with a lot more songs consumed in my end of the woods. With that, here's a list of my top songs of the year.
                                 </Grid>
-                                <Divider style={{marginBottom: '2rem'}}/>
+                                <Divider/>
 
                                 {data.allMarkdownRemark.edges.map(post => (
                                     <div>
-                                        <Grid container>
+                                        <Grid container style={{margin: '2rem 2rem 0rem 2rem'}}>
                                             <Grid item xs={5} ><img width="220px" src={post.node.frontmatter.image}/></Grid>
                                             <Grid xs={7} container direction="column">
                                                 <Grid item className={classes.headerTwo}>{post.node.frontmatter.rank}.</Grid>
                                                 <Grid item className={classes.headerTwo}>{post.node.frontmatter.artist}: "{post.node.frontmatter.song}"</Grid>
+                                                <Typography
+                                                    variant="body2"
+                                                    color="textSecondary"
+                                                    style={{marginTop: '1rem'}}
+                                                >
+                                                    <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
+                                                </Typography>
                                             </Grid>
                                         </Grid>
-                                        <Divider style={{marginBottom: '2rem',}}/>
+                                        <Divider />
                                     </div>
                                 ))}
                             </Grid>
